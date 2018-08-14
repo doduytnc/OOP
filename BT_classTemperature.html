@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    var Temperature = function (celius) {
+        this.getFahrenheit = function () {
+            if (celius < -273) {
+                return alert("Temperature is too low. Don't convert to Fahrenheit. Please enter again!");
+            } else
+            return (9*celius/5)+32;
+        }
+
+        this.getKelvin = function () {
+            if (celius < -273) {
+                return alert("Temperature is too low. Don't convert to Kelvin. Please enter again!");
+            } else
+                return celius + 273;
+        }
+
+        this.CtoFK = function () {
+            document.write("Celius: " +celius +"; Fahrenheit: " +this.getFahrenheit() +"; Kenlvin: " +this.getKelvin());
+        }
+
+    }
+
+    var tem1 = new Temperature(-30);
+    tem1.CtoFK();
+</script>
+</body>
+</html>

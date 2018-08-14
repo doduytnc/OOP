@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Rectangle = function (width, height) {
+        this.getArea = function(){
+            return width * height;
+        }
+
+        this.getPerimeter = function () {
+            return 2*width*height;
+        }
+
+        this.result = function () {  //Chuc nang hien thi ket qua
+            document.write("width = " + width + "; height =  " + height);
+            document.write("; Area: " + this.getArea());
+            document.write("; Perimeter: " +this.getPerimeter());
+        }
+
+        this.display = function () {
+            for (var i = 1; i <= height; i++) {
+                for (var j = 1; j <= width; j++) {
+                    console.log("#");
+                }
+                console.log("<br>");
+            }
+
+        }
+    }
+
+    function main() {
+        //tao doi tuong hinh chu nhat co width = 2, height = 5
+        var rec1 = new Rectangle(10 , 5);
+        rec1.result();
+        document.write("<br>");
+        rec1.display();
+
+
+        /*    var rec2 = new Rectangle(5, 7);
+            //muon hien thi doi tuong rec1
+            rec1.display();
+            console.log("Rectangle 1: ")
+            //muon hien thi doi tuong rec2
+            rec2.display(); */
+    }
+
+    main();
+</script>
+</body>
+</html>
